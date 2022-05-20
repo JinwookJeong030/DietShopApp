@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/gray_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyConsignmentManageActivity">
+
+<!--신규 배송지 추가 버튼-->
+    <Button
+        android:layout_margin="10dp"
+        android:background="@drawable/my_gray_edittext"
+        android:layout_width="match_parent"
+        android:text="신규 배송지 추가"
+        android:layout_height="30dp">
+    </Button>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="상품구매 적립 포인트는 배송완료 후 자동 지급됩니다."
+            android:textSize="9dp"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_400"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+<!--배송지 리스트-->
+    <ListView
+        android:id="@+id/my_manage_consignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

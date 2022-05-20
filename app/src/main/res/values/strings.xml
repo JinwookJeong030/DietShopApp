@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DietControl</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="sessionC_seq"></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="server_url">http://hsdiet.dothome.co.kr/</string>
+    <string name="my_server_url">http://121.137.243.177:8088/</string>
+
+    <string-array name="isUseable">
+        <item>"사용가능 쿠폰"</item>
+        <item>"사용만료 쿠폰"</item>
+    </string-array>
+
+    <string-array name="email_address">
+        <item>"이메일 선택"</item>
+        <item>"gmail.com"</item>
+        <item>"naver.com"</item>
+        <item>"daum.net"</item>
+        <item>"hanmail.net"</item>
+        <item>"nate.com"</item>
+        <item>"lycos.co.kr"</item>
+        <item>"hotmail.com"</item>
+        <item>"outlook.com"</item>
+        <item>"korea.com"</item>
+        <item>"yahoo.co.kr"</item>
+        <item>"dreamwiz.com"</item>
+        <item>"hs.ac.kr"</item>
+        <item>"직접입력"</item>
+    </string-array>
+</resources>

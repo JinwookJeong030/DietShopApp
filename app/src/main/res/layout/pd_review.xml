@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+
+        <RatingBar
+            android:id="@+id/pd_review_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/pd_name_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:text="이름 | 날짜"
+            app:layout_constraintTop_toBottomOf="@id/pd_review_ratingbar" />
+
+        <TextView
+            android:id="@+id/pd_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요 리뷰의 내용은 많으면 많을수록 좋아요"
+            android:layout_margin="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pd_name_date"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

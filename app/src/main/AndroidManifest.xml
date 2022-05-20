@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cookandroid.dietcontrol">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_tiger"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_tiger_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DietControl"
+        android:usesCleartextTraffic="true"
+        >
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eventnotice.EventContentsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".login.Signup"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".shop.addressAPI"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".shop.pp_purchaseResult"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".shop.pp_PurchaseProduct"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".shop.pd_write_reviewAct"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".shop.pd_ProductDetails"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.ConsignmentModify"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.MyConsignmentManageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.ClientInfoModify"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.PurchaseListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.CouponMugwortActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.PointGarlicActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".mypage.MyReviewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".mypage.PasswordChangeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mypage.AddressSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".dietmanagement.DietListDetail"
+            android:label="detailDiet"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".dietmanagement.DietListEditing"
+            android:label="editDiet"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".dietmanagement.DietStatistics"
+            android:label="statisticsDiet"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".util.ErrorDialog"/>
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식단 시기선택"
+        android:textColor="@color/black"
+        />
+
+  <RadioGroup
+      android:id="@+id/edit_diet_dialog_radio"
+      android:layout_height="wrap_content"
+      android:layout_width="300dp"
+
+      >
+      <RadioButton
+          android:id="@+id/edit_diet_radio_0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="아침"
+          android:textColor="@color/black"
+          />
+      <RadioButton
+          android:id="@+id/edit_diet_radio_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="점심"
+          android:textColor="@color/black"
+          />
+      <RadioButton
+          android:id="@+id/edit_diet_radio_2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="저녁"
+          android:textColor="@color/black"
+          />
+      <RadioButton
+          android:id="@+id/edit_diet_radio_3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="간식 및 야식"
+          android:textColor="@color/black"
+          />
+      <RadioButton
+          android:id="@+id/edit_diet_radio_4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="운동"
+          android:textColor="@color/black"
+          />
+
+  </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="shop_spinner">
+        <item>기본순</item>
+        <item>낮은가격순</item>
+        <item>높은가격순</item>
+    </string-array>
+
+    <string-array name="pd_spinner">
+        <item>평점순</item>
+        <item>최신순</item>
+    </string-array>
+
+    <string-array name="pp_cardSpinner">
+        <item>신한카드</item>
+        <item>국민카드</item>
+    </string-array>
+
+    <string-array name="pp_howSpinner">
+        <item>일시불</item>
+        <item>할부</item>
+    </string-array>
+</resources>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+
+    android:background="#FAFAFA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:context=".mypage.ClientInfoModify">
+    <include
+        android:layout_gravity="top"
+        android:id="@+id/diet_main_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/actionbar_top"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/diet_main_top">
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--아이디/비밀번호-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="아이디/비밀번호"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="*"
+                android:textColor="#FF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/mdf_client_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/gray_500"
+            android:editable="false"
+            android:padding="5dp"
+            android:text="Client_ID"
+            android:textColor="#585858" />
+
+        <Button
+            android:id="@+id/mdf_password_change"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/my_gray_edittext"
+            android:text="비밀변호 변경" />
+
+
+        <!--회원정보-->
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="회원정보"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="*"
+                android:textColor="#FF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/mdf_client_name"
+            android:text="Client_Name"
+            android:textColor="#585858"
+            android:editable="false"
+            android:background="@color/gray_500"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/mdf_alias"
+            android:hint="닉네임"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/my_gray_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/mdf_phonenum"
+            android:hint="010-0000-0000"
+            android:padding="5dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/my_gray_edittext"
+            android:layout_width="match_parent"
+            android:maxLength="13"
+            android:layout_height="wrap_content"/>
+
+        <!--생년월일-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="생년월일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="*"
+                android:textColor="#FF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mdf_my_birth_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="생년월일 선택"/>
+        <!--이메일-->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="이메일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="*"
+                android:textColor="#FF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/mdf_email_id"
+                android:hint="아이디"
+                android:background="@drawable/my_gray_edittext"
+                android:padding="5dp"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="\u0040"
+                android:layout_weight="5.6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/mdf_email_direct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/gray_500"
+                android:enabled="false"
+                android:padding="5dp"
+                android:textColor="#585858" />
+        </LinearLayout>
+        <!--이메일선택부분-->
+        <LinearLayout
+            android:onClick="OnclickEmailChoice"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/my_gray_edittext"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mdf_email_choice"
+                android:padding="5dp"
+                android:textSize="13dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/ic_down_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+
+        <!--성별-->
+        <TextView
+            android:text="성별"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:background="@drawable/my_gray_edittext"
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/mdf_sex_man"
+                android:text="남자"
+                android:textColor="@color/black"
+                android:layout_marginRight="2dp"
+                android:background="@color/white"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/mdf_sex_woman"
+                android:text="여자"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!--     배송지 설정-->
+        <TextView
+            android:text="배송지 정보"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:padding="10dp"
+            android:background="@drawable/my_gray_edittext"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mdf_ad_zipcode"
+                android:text="우편번호"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/mdf_addressee"
+                android:layout_marginTop="10dp"
+                android:text="기본주소"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/mdf_subaddressee"
+                android:layout_marginTop="10dp"
+                android:text="상세주소"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/mdf_addressee_modify"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/my_gray_edittext"
+                    android:text="수정" />
+
+                <Button
+                    android:id="@+id/mdf_addressee_delete"
+                    android:text="삭제"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/my_gray_edittext"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--약관동의-->
+        <CheckBox
+            android:id="@+id/mdf_email_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="[선택] 이메일 수신동의 (쿠폰, 이벤트)" />
+
+        <CheckBox
+            android:id="@+id/mdf_sms_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[선택] SMS 수신동의 (쿠폰, 이벤트)"/>
+
+        <Button
+            android:id="@+id/mdf_modify_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="수정"/>
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

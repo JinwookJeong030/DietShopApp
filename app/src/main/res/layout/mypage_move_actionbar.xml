@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--상단 링크 버튼-->
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/move_my_howhang"
+            android:text="마이호왕"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+        <View
+            android:background="@color/gray_400"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/move_purchase_list"
+            android:text="구매내역"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+        <View
+            android:background="@color/gray_400"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/move_review_product"
+            android:text="내가쓴글"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+        <View
+            android:background="@color/gray_400"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/move_point_garlic"
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="마늘"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <View
+            android:background="@color/gray_400"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/move_coupon_mugwort"
+            android:text="쿠폰"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

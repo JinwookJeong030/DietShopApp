@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dietmanagement.DietListEditing"
+    android:gravity="bottom"
+    android:background="@color/white"
+    android:id="@+id/pic_type"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_diet_editing"
+    >
+
+
+
+        <include
+            android:id="@+id/diet_main_top"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/actionbar_top"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diet_main_top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+            android:id="@+id/diet_edit_point_check"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="오늘 최초 작성시 포인트 10 지급!"
+            android:textColor="@color/orange"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+            <ImageView
+                android:id="@+id/edit_diet_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_diet_camera"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/edit_diet_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_diet_img">
+
+                <Button
+                    android:id="@+id/edit_diet_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="#00ff0000"
+                    android:text="아침"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/edit_diet_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toRightOf="@id/edit_diet_period"
+                    android:background="#00ff0000"
+                    android:text="2022-01-01"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edit_diet_period"
+                    android:background="#949494" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edit_diet_date"
+                    android:background="#949494" />
+
+                <Button
+                    android:id="@+id/edit_diet_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/edit_diet_date"
+                    android:background="#00ff0000"
+                    android:text="00:00"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/black" />
+
+            <ScrollView
+                android:id="@+id/rev_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/my_gray_edittext">
+
+                <EditText
+                    android:id="@+id/edit_diet_contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/my_white_edittext"
+                    android:ems="10"
+                    android:hint="내용입력"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:scrollHorizontally="false"
+                    android:text=""
+                    android:textColor="@color/black"/>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/edit_diet_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:text="식단 기록"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘 먹은 음식"
+                        android:layout_marginRight="48dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_meal_content"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘먹은 칼로리"
+                        android:layout_marginRight="48dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_kcal_content"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edit_exercise_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="운동 기록"
+                    android:textSize="30dp"
+                    android:layout_marginLeft="17dp"
+                    android:textColor="@color/black"/>
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘의 몸무게"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_weight_content"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kg"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘의 키"
+                        android:layout_marginRight="46dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_height_content"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="@color/black"
+                       />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="체지방량"
+                        android:layout_marginRight="48dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_fat_content"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="%" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400"
+                    android:layout_marginBottom="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="운동 부위"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="48dp"/>
+
+                    <Spinner
+                        android:id="@+id/diet_edit_part_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        >
+
+                    </Spinner>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/gray_400" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="운동 시간"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="48dp"/>
+
+                    <EditText
+                        android:id="@+id/diet_edit_minute_content"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="분" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_400" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@color/black"
+            />
+        <ImageView
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:src="@color/black"
+            />
+    </LinearLayout>
+</RelativeLayout>

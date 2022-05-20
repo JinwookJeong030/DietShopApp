@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.Login"
+    android:background="@color/white"
+    android:id="@+id/login_activity"
+    >
+
+    <include
+        android:layout_gravity="top"
+        android:id="@+id/diet_main_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/actionbar_top"
+        />
+
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="140dp"
+
+    >
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/login_loading_floating_btn"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:src="@drawable/ic_tiger"
+
+        app:maxImageSize="50dp"
+        android:layout_centerInParent="true"
+            android:visibility="gone"
+        app:fabCustomSize="60dp"
+
+        app:backgroundTint="@color/gray_500"
+        />
+
+
+    <EditText
+        android:id="@+id/log_inputID"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="60dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/my_round_edittext"
+        android:ems="10"
+        android:hint="아이디"
+        android:textSize="13dp"
+        android:textColorHint="@color/gray_500"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+
+        />
+
+    <EditText
+        android:id="@+id/log_inputPW"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="90dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/my_round_edittext"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:textColorHint="@color/gray_500"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/log_signupBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="150dp"
+            android:text="회원가입" />
+
+        <Button
+            android:id="@+id/log_signinBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="로그인" />
+
+
+    </LinearLayout>
+</RelativeLayout>
+</FrameLayout>

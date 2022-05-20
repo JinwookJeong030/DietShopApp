@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/diet_main_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/actionbar_top"/>
+
+    <RelativeLayout
+        android:id="@+id/dietmain_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diet_main_top"
+
+        android:layout_gravity="center|top"
+        android:background="@color/white"
+        android:gravity="center|top"
+
+        >
+
+        <Button
+            android:id="@+id/btnToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffffff"
+            android:text="0000-00-00()"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/cal_btn_down"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/btnToday"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_down_arrow" />
+
+        <Button
+            android:id="@+id/btnYesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btnToday"
+            android:background="#00ff0000"
+            android:text="0000-00-00()"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+
+            />
+
+        <Button
+            android:id="@+id/btnTomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/btnToday"
+            android:background="#00ff0000"
+            android:text="0000-00-00()"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+
+            />
+
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/cal"
+
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/white"
+            android:visibility="gone"
+
+            />
+
+        <ImageButton
+            android:id="@+id/cal_btn_up"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@id/cal"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_diet_up"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_dietlog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dietmain_date_layout"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabSelectedTextColor="@color/teal_200"
+        app:tabTextColor="@color/black"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="식단"
+
+            android:textColor="@color/black" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="운동"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:background="#A2A2A2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@+id/tablayout_dietlog"
+        android:elevation="5dp"
+        />
+    <View
+        android:background="@color/gray_400"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/tablayout_dietlog"
+
+        />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll_diet"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout_dietlog"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/list_diet_log"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:id="@+id/scroll_exercise"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tablayout_dietlog"
+        android:layout_marginBottom="50dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ListView
+            android:id="@+id/list_exercise_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/dietmain_bottomPadding"
+        android:layout_alignParentEnd="true">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diet_main_floating_btn_statistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_diet_stastics"
+        app:fabSize="normal"
+        app:tint="@android:color/black"
+        app:backgroundTint="@color/teal_200"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+       />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diet_main_floating_btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_diet_plus"
+        app:fabSize="normal"
+        app:tint="@android:color/black"
+        app:backgroundTint="@color/teal_200"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+
+      />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dietmain_bottomPadding"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+
+</RelativeLayout>
